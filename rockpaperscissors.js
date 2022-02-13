@@ -18,7 +18,7 @@ function computerPlay() {
     } else if (computerHand === 2) {
         computerSelection = 'scissors';
     }
-    return computerSelection
+    return computerSelection;
 }
 
 /* Decides who wins in each rounds by comparing hands */
@@ -194,10 +194,10 @@ const toggleRules = document.querySelector('#hideRules');
 toggleRules.addEventListener('click', () => {
     const rules = document.getElementById("rules");
     rules.classList.toggle('hidden');
-    if (toggleRules.textContent === "Hide Rules") {
-        toggleRules.textContent = "Show Rules";
+    if (toggleRules.textContent === "Hide rules!") {
+        toggleRules.textContent = "Show rules!";
     } else {
-        toggleRules.textContent = "Hide Rules";
+        toggleRules.textContent = "Hide rules!";
     }
 })
 
