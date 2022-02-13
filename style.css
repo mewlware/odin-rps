@@ -1,0 +1,199 @@
+/* IMPORTS */
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;400;700;900&family=VT323&display=swap');/* CSS RESET */
+html {
+  box-sizing: border-box;
+  font-family: 'Inconsolata', monospace;
+  overflow-x: hidden;
+}
+
+/* RESET */
+
+*, *:before, *:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+button {
+  display: inline-block;
+  border: none;
+  margin: 0;
+  text-decoration: none;
+  font-family: 'Inconsolata', monospace;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  transition: background 250ms ease-in-out, 
+              transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: hsl(36, 100%, 94%);
+}
+
+button:hover,
+button:focus {
+  background: #f7a325;
+}
+
+button:focus {
+  outline: 1px solid #fff;
+  outline-offset: -4px;
+}
+
+button:active {
+  transform: scale(1.05);
+}
+
+/* Page Starting Styles */
+body {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: hsl(187, 67%, 12%);
+  min-height: 100vh;
+  position:relative;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  
+  
+  font-family: 'VT323', monospace;
+  font-size: 32px;
+  text-transform: uppercase;
+  padding: 24px;
+  background-color: hsl(187, 37%, 12%);
+  color:hsl(36, 100%, 74%);
+  
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 12px;
+
+  margin-bottom: 36px;
+}
+
+main h2 {
+  font-family: 'VT323', monospace;
+  font-size: 48px;
+  color:hsl(36, 93%, 56%);
+  margin-bottom: 12px;
+}
+
+main {
+  color: #ffca7a;
+}
+
+footer {
+  font-size: 16px;
+  color:hsl(36, 100%, 74%);
+  background-color: hsl(187, 37%, 12%);
+  width: 100vw;
+  padding: 16px;
+  margin: 12px 0 0 0;
+}
+
+article {
+  margin-bottom: 36px;
+}
+
+aside {
+  margin: 0 auto 24px;
+  margin-bottom: 36px;
+  width: 350px;
+}
+
+section {
+  margin-bottom: 36px;
+}
+
+aside > ul {
+  width: content;
+  margin-bottom: 24px;
+  text-align: justify;
+  list-style-position: inside;
+}
+
+aside > ul > li {
+  font-size: 22px;
+  list-style-type: square;
+  margin-bottom:8px;
+}
+
+aside > ul > li.important-rule {
+  font-size: 32px;
+  font-weight:700;
+  text-align: center;
+  list-style-type: none;
+}
+
+button#hide-rules {
+  padding: 12px;
+  border-radius: 16px;
+  font-weight:900;
+  color:hsl(187, 67%, 12%);
+}
+
+button#hide-rules:hover {
+  background-color: hsl(36, 100%, 74%);
+}
+
+.hand {
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+}
+
+.container-hand {
+  display: flex;
+  gap: 12px;
+  background-color: hsl(13, 90%, 59%);
+  padding: 12px 12px;
+  border-radius: 36px;
+  width: min-content;
+}
+
+.container-hand button {
+  font-size: 64px;
+  min-width: 140px;
+  min-height: 140px;
+  text-align: center;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button svg {
+  margin: 0 auto;
+}
+
+section.result div.gameHand {
+  display: flex;
+  justify-content: center;
+
+  font-size: 56px;
+}
+
+section.result div.totalWins {
+  display: flex;
+  justify-content: center;
+  font-family: 'VT323', monospace;
+  font-size: 36px;
+}
+
+.playerHand,
+.computerHand {
+  font-size: 56px;
+}
+
+div.totalWins div {
+  margin: 0 24px;
+}
+
+div.totalWins p {
+  display: inline-block;
+}
