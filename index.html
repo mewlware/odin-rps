@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">    
-    <script src="rockpaperscissors.js"></script>
+    <script src="rockpaperscissors.js" defer></script>
     <title>Rock Paper Scissors</title>
 </head>
 <body>
@@ -15,20 +15,20 @@
         <p class="emoji">✨</p>
     </header>
     <main>
-        <aside class="rules">
+        <aside class="rules" id="rules">
             <h2>Rules</h2>
             <ul>
                 <li>Rock wins against scissors</li>
                 <li>Paper wins against rock</li>
                 <li>Scissors wins against paper</li>
-                <li class="important-rule">Best out of 5 wins!</li>
+                <li class="importantRule">Best out of 5 wins!</li>
             </ul>
-            <button id="hide-rules">Hide rules!</button>
         </aside>
+        <button id="hideRules" class="button">Hide rules!</button>
         <article class="game">
             <section class="hand">
                 <h2>Choose your fighter!</h2>
-                <div class="container-hand">
+                <div class="containerHand">
                     <button class="rock">
                         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                         width="84" height="84"
@@ -50,20 +50,26 @@
             <section class="result">
                 <h2>Results</h2>
                 <p class="resultText"></p>
-                <div class="totalWins">
+                <div id="totalWins" class="totalWins">
                     <div class="player">
                         <div class="playerHand">?</div>
-                        <p class="playerTotalText">Player wins: </p>
-                        <p class="playerTotalWins">0</p>
+                        <div class="playerWinsWrapper">
+                            <p class="playerTotalText">Player wins: </p>
+                            <p class="playerTotalWins">0</p>
+                        </div>
                     </div>
+                    <div id="versus">vs</div>
                     <div class="computer">
                         <div class="computerHand">?</div>
-                        <p class="computerTotalText">Computer wins: </p>
-                        <p class="computerTotalWins">0</p>
+                        <div class="computerWinsWrapper">
+                            <p class="computerTotalText">Computer wins: </p>
+                            <p class="computerTotalWins">0</p>
+                        </div>
                     </div>
                 </div>
             </section>
         </article>
+        <button id="reset" class="button">Reset Game</button>
     </main>
     <footer>By mewlware for The Odin Project @2022</footer>
 </body>
